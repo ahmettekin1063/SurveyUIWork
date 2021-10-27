@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ReposSurveyUI</string>
+
+    <string name="feedback_survey">Feedback Survey</string>
+    <string name="survey_explanation">This survey has been made for any app \nrelated feedback from customers.</string>
+    <string name="required_fields">* Required Fields</string>
+</resources>
