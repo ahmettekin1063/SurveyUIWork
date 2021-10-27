@@ -26,7 +26,7 @@ class MainActivity : AppCompatActivity() {
                 Spannable.SPAN_EXCLUSIVE_EXCLUSIVE
             )
         }*/
-        findViewById<TextView>(R.id.tvTest).append("*", R.color.DarkRed)
+        //findViewById<TextView>(R.id.tvTest).append("*", R.color.DarkRed)
     }
 }
 

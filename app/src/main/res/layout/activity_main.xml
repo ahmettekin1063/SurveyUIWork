@@ -17,9 +17,7 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:paddingStart="20dp"
-            android:paddingEnd="20dp">
+            android:orientation="vertical">
 
             <ImageView
                 android:id="@+id/imgRepos"
@@ -60,171 +58,505 @@
                 android:layout_gravity="center"
                 android:textSize="10sp" />
 
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical"
-                android:padding="10dp"
-                android:layout_marginTop="10dp"
-                android:background="@drawable/border_blue_checkbox_ver1">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin = "15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
+
 
                 <TextView
-                    android:id="@+id/tvTest"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:text="How would you describe your business type?"
-                    android:textSize="20sp"
-                    android:textStyle="bold"
-                    android:layout_gravity="center"
-                    android:textColor="@color/login_text_color"/>
-
-                <LinearLayout
+                    android:id="@+id/tvSurveyTitle1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal">
+                    android:text="How would you describe your business type?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    <LinearLayout
-                        android:layout_height= "wrap_content"
-                        android:layout_width= "wrap_content"
-                        android:orientation= "vertical"
-                        >
+                <RadioGroup
+                    android:id="@+id/rgSurvey1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle1"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle1">
 
-                        <RadioGroup
-                            android:layout_width="wrap_content"
-                            android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rbSurvey1Restaurant"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Restaurant" />
 
-                            <RadioButton
-                                android:id="@+id/radioButton"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Restaurant" />
+                    <RadioButton
+                        android:id="@+id/rbSurvey1Cafe"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Cafe" />
 
-                            <RadioButton
-                                android:id="@+id/radioButton2"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Cafe" />
+                    <RadioButton
+                        android:id="@+id/rbSurvey1FastFood"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Fast-Food Restaurant" />
 
-                            <RadioButton
-                                android:id="@+id/radioButton3"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:text="Fast-Food Restaurant" />
+                    <RadioButton
+                        android:id="@+id/rbSurvey1Other"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Other:" />
+                </RadioGroup>
 
-                            <RadioButton
-                                android:id="@+id/radioButton4"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:buttonTint="@color/login_text_color"
-                                android:text="Other"
-                                android:textColor="@color/login_text_color"
-                                android:textStyle="bold" />
+                <EditText
+                    android:id="@+id/etOtherExplanation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/login_text_color"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/LightBlue"
+                    android:ems="10"
+                    android:hint="Please Write"
+                    android:textColor="@color/login_text_color"
 
-                        </RadioGroup>
-
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_height= "wrap_content"
-                        android:layout_width= "wrap_content">
-
-                        <EditText
-                            android:id="@+id/editTextTextPersonName"
-                            android:layout_width="0dp"
-                            android:layout_height="match_parent"
-                            android:layout_weight="1"
-                            android:ems="10"
-                            android:inputType="textPersonName"
-                            android:layout_gravity="bottom"
-                            android:text="Name">
-
-                        </EditText>
-
-                    </LinearLayout>
-
-
-
+                    android:inputType="text"
+                    app:layout_constraintBottom_toBottomOf="@+id/rgSurvey1"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSurveyTitle1"
+                    app:layout_constraintStart_toEndOf="@+id/rgSurvey1" />
 
 
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
-                </LinearLayout>
-
-            </LinearLayout>
-
-            <LinearLayout
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
+
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvSurveyTitle2"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text="How long have you been using RePOS?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    android:textSize="100sp" />
-            </LinearLayout>
+                <RadioGroup
+                    android:id="@+id/rgSurvey2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle2"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle2">
 
-            <LinearLayout
+                    <RadioButton
+                        android:id="@+id/rbSurvey2Option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Less than 1 month"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey2Option2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Between 1-6 months"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey2Option3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="6 months to 1 year"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey2Option4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="More than 1 year"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
+
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvSurveyTitle3"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView"
+                    android:text="How do you feel about RePOS's premium package in terms of price - performance?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-                    android:textSize="100sp" />
-            </LinearLayout>
+                <RadioGroup
+                    android:id="@+id/rgSurvey3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle3"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle3">
 
-            <LinearLayout
+                    <RadioButton
+                        android:id="@+id/rbSurvey3Option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Very good"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey3Option2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Good"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey3Option3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="No idea"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey3Option4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Bad"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey3Option5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Very bad"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
+
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvSurveyTitle4"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </LinearLayout>
+                    android:text="On a scale from 1-5, how easy was it to use RePOS for your business needs?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+                <RadioGroup
+                    android:id="@+id/rgSurvey4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle4"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle4">
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey4Option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="5 - Very Easy"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey4Option2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="4"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey4Option3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="3"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey4Option4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="2"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey4Option5"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="1 - Very Difficult"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+                </RadioGroup>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvSurveyTitle5"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </LinearLayout>
+                    android:text="Are there any functions you would like us to add?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+                <EditText
+                    android:id="@+id/editTextTextMultiLine"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:lines="3"
+                    android:textColor="@color/login_text_color"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/LightBlue"
+                    android:hint="Please write"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSurveyTitle5"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle5"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle5" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
+
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvSurveyTitle6"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </LinearLayout>
+                    android:text="Would you recommend this app to your friends or colleagues?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+                <RadioGroup
+                    android:id="@+id/rgSurvey6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle6"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle6">
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey6Option1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Yes"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey6Option2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="No"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                    <RadioButton
+                        android:id="@+id/rbSurvey6Option3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/login_text_color"
+                        android:text="Maybe"
+                        android:textColor="@color/login_text_color"
+                        android:textStyle="bold" />
+
+                </RadioGroup>
+
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical">
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
 
                 <TextView
-                    android:layout_width="match_parent"
+                    android:id="@+id/tvSurveyTitle7"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="TextView" />
-            </LinearLayout>
+                    android:text="Name"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
 
-            <LinearLayout
+                <EditText
+                    android:id="@+id/etSurvey7"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/login_text_color"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/LightBlue"
+                    android:hint="Please write"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSurveyTitle7"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle7"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle7" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:orientation="vertical"></LinearLayout>
+                android:background="@drawable/border_blue_checkbox_ver1"
+                android:padding="15dp"
+                android:layout_margin="15dp"
+                tools:layout_editor_absoluteX="20dp"
+                tools:layout_editor_absoluteY="251dp">
+
+                <TextView
+                    android:id="@+id/tvSurveyTitle8"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="E-mail Address?"
+                    android:textColor="@color/login_text_color"
+                    android:textSize="20sp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etSurvey8"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:ems="10"
+                    android:gravity="start|top"
+                    android:inputType="textMultiLine"
+                    android:textColor="@color/login_text_color"
+                    android:textStyle="bold"
+                    android:textColorHint="@color/LightBlue"
+                    android:hint="Please write"
+                    app:layout_constraintEnd_toEndOf="@+id/tvSurveyTitle8"
+                    app:layout_constraintStart_toStartOf="@+id/tvSurveyTitle8"
+                    app:layout_constraintTop_toBottomOf="@+id/tvSurveyTitle8" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:text="SEND FORM"
+                android:layout_marginStart="75dp"
+                android:layout_marginEnd="75dp"
+                android:layout_marginBottom="15dp"
+                android:layout_gravity="center"/>
+
         </LinearLayout>
     </ScrollView>
 
